@@ -1,5 +1,6 @@
 import React from "react";
 import "./footer.css";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -76,16 +77,40 @@ const Footer = () => {
           {/* Social Icons */}
           <div className="social-icons">
             <a href="#">
-              <img src="/pinterest-icon.svg" alt="Pinterest" />
+              <Image
+                src="/pinterest-icon.svg"
+                alt="img"
+                width={0}
+                height={0}
+                unoptimized
+              ></Image>
             </a>
             <a href="#">
-              <img src="/instagram-icon.svg" alt="Instagram" />
+              <Image
+                src="/instagram-icon.svg"
+                alt="img"
+                width={0}
+                height={0}
+                unoptimized
+              ></Image>
             </a>
             <a href="#">
-              <img src="/email-icon.svg" alt="Email" />
+              <Image
+                src="/email-icon.svg"
+                alt="img"
+                width={0}
+                height={0}
+                unoptimized
+              ></Image>
             </a>
             <a href="#">
-              <img src="/linkedin-icon.svg" alt="LinkedIn" />
+              <Image
+                src="/linkedin-icon.svg"
+                alt="img"
+                width={0}
+                height={0}
+                unoptimized
+              ></Image>
             </a>
           </div>
         </div>
