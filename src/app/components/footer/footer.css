@@ -1,0 +1,160 @@
+/* Footer Container */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 60px 10%;
+  font-family: Arial, sans-serif;
+}
+
+/* Footer Main Layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 50px;
+}
+
+/* Left Section */
+.footer-left {
+  flex: 1;
+}
+
+/* Logo */
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  padding: 10px;
+  width: 50px;
+  text-align: center;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  gap: 50px;
+}
+
+.footer-column h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: gray;
+}
+
+/* Right Section - Newsletter */
+.footer-right {
+  flex: 1;
+  max-width: 400px;
+}
+
+.footer-right h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.footer-right p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Newsletter */
+.newsletter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.newsletter button {
+  padding: 10px 15px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.newsletter button:hover {
+  background: white;
+  color: black;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: underline;
+  margin-left: 10px;
+}
+
+.footer-bottom a:hover {
+  color: gray;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-right {
+    max-width: 100%;
+  }
+
+  .newsletter {
+    flex-direction: column;
+  }
+}
