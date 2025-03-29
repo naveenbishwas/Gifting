@@ -576,94 +576,6 @@ textarea {
   transition: all 0.3s ease;
 }
 
-/* FAQ Section */
-.faq-section {
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.faq-section h2 {
-  font-size: 35px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.faq-arrow {
-  font-size: 71px;
-  color: #7ba6a0;
-  margin-bottom: 20px;
-  font-weight: 100;
-}
-
-/* FAQ Items */
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.faq-item {
-  border-bottom: 1px solid #ccc;
-  padding: 15px 0;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.faq-question {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 22px;
-  font-weight: 100;
-}
-
-.faq-toggle {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-/* Smooth Transition for Answer */
-.faq-answer {
-  font-size: 18px;
-  color: #555;
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  padding: 0;
-  transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out,
-    padding 0.3s ease-in-out;
-  float: left;
-  margin-left: 10px;
-  margin-top: 15px;
-}
-
-/* When Answer is Open */
-.faq-answer.open {
-  max-height: 200px; /* Adjust based on content length */
-  opacity: 1;
-  padding-top: 10px;
-  float: left;
-  margin-left: 10px;
-  margin-top: 15px;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .faq-section {
-    padding: 30px 15px;
-  }
-
-  .faq-question {
-    font-size: 16px;
-  }
-
-  .faq-answer {
-    font-size: 14px;
-  }
-}
-
 /* Gift Section */
 .gift-section {
   width: 100%;
@@ -942,7 +854,7 @@ textarea {
   }
 }
 
-/* Stats Section */
+/* 
 .stats-section {
   background-color: #f3f3f3;
   padding: 6% 0;
@@ -981,7 +893,7 @@ textarea {
   margin-top: 4%;
 }
 
-/* .stat  */
+
 .number {
   width: 200px;
   height: 90px;
@@ -1017,6 +929,69 @@ textarea {
 
 .title {
   flex: 0 0 60%;
+} */
+
+.custom-section {
+  background-color: #f1f7f5;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.custom-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  margin-top: 3%;
+}
+
+.custom-section p {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  margin-top: 30px;
+  line-height: 1.4;
+}
+
+.custom-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.card p {
+  color: #666;
+}
+
+.checkmark {
+  font-size: 3rem;
+  color: green;
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.star {
+  font-size: 2rem;
+  color: gold;
 }
 
 /* Call To Action Section */

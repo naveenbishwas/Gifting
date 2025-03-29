@@ -65,10 +65,11 @@ const ContactForm = () => {
 
   return (
     <div className="form-container">
-      <h1>Ready to bring your custom gifts to life?</h1>
+      <h1>Ready to Explore Our Corporate Solutions?</h1>
       <p className="form-header">
-        Fill out the form below and we’ll be in touch within 1 business day
-        (usually sooner!). Minimum $5,000 gifting budget.
+        Fill out the form below, and we’ll get back to you within one business
+        day (usually sooner!). Let us know your requirements, and we’ll help
+        bring your project to life.
       </p>
       <p className="form-subtext">
         If you just can’t wait, <a href="#">book a call</a> or call us at

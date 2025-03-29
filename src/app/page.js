@@ -250,109 +250,54 @@ export default function Home() {
         </div>
       </div>
 
-      {/* <section className="what-we-do">
-        <span>
-          <h1>
-            You know your brand. We know gifting.
-            <br />
-            Together we're unstoppable!
-          </h1>
+      <section>
+        <div className="custom-section">
+          <h2>
+            You know your business. We know how to deliver.
+            <br /> Together, we're unstoppable!
+          </h2>
           <p>
-            Our goal: A totally seamless gifting experience that wows your
-            clients, colleagues, or employees!
+            Our goal: to be your one-stop partner for corporate procurement,
+            manufacturing, and <br />
+            gifting—ensuring a seamless experience that wows clients, <br />{" "}
+            colleagues, or employees!
           </p>
-        </span>
-      </section> */}
-
-      <section className="stats-section">
-        <div className="container">
-          <div className="tit-sub">
-            <h2 className="title">
-              Why Choose NestBes for Real Estate Partner
-            </h2>
-            <p className="subtitle">
-              At RealStruct, we understand that choosing a real estate partner
-              is a significant decision. Here why we stand out from the rest.
-            </p>
-          </div>
-          <div className="stats-container">
-            <div className="stat">
-              <div className="number">07 +</div>
-              <p className="description">Full Customization ✔️</p>
+          <div className="custom-cards">
+            <div className="card">
+              <span className="checkmark">🛠️</span>
+              <h3>Full Customization</h3>
+              <p>
+                Represents building, tailoring, or customizing something to your
+                exact specs.
+              </p>
             </div>
-            <div className="stat">
-              <div className="number">20 +</div>
-              <p className="description">Branded Packaging 🎨</p>
+            <div className="card">
+              <div className="icon">🎨</div>
+              <h3>Brand Integration</h3>
+              <p>
+                Suggests creativity, design, and visually integrating brand
+                elements.
+              </p>
             </div>
-            <div className="stat">
-              <div className="number">600 +</div>
-              <p className="description">Tech Solutions 💻</p>
+            <div className="card">
+              <div className="icon">💻</div>
+              <h3>Seamless Technology</h3>
+              <p>
+                Conveys modern tech solutions—portals, automated processes, and
+                streamlined systems.
+              </p>
             </div>
-            <div className="stat">
-              <div className="number">96 +</div>
-              <p className="description">1 on 1 Support ⭐</p>
+            <div className="card">
+              <div className="star">🤝 </div>
+              <h3>Dedicated Support</h3>
+              <p>
+                Symbolizes close collaboration, personalized attention, and
+                partnership.
+              </p>
             </div>
           </div>
         </div>
       </section>
-
-      {/* <section className="features-testimonials">
-        <div className="features-container">
-          <div className="features-card">
-            <div className="feature">
-              <span className="feature-icon"></span>
-              <h3>Full Customization</h3>
-              <p>
-                No feeling locked-in by a catalog! We’ll create completely
-                custom gifts to fit your exact needs!
-              </p>
-            </div>
-            <div className="feature">
-              <span className="feature-icon"></span>
-              <h3>Branded Packaging</h3>
-              <p>
-                We go beyond “insert logo here” packaging. Our in-house designer
-                is at the ready!
-              </p>
-            </div>
-            <div className="feature">
-              <span className="feature-icon"></span>
-              <h3>Tech Solutions</h3>
-              <p>
-                Custom portals? Branded storefronts? Recipient choice? Yes, yes,
-                and absolutely!
-              </p>
-            </div>
-            <div className="feature">
-              <span className="feature-icon"></span>
-              <h3>1 on 1 Support</h3>
-              <p>
-                Work 1:1 with a dedicated Account Manager from start to finish.
-                60% of our clients have worked with us for years.
-              </p>
-            </div>
-          </div>
-          <div className="features-black-background"></div>
-        </div>
-
-        <div className="testimonial-container">
-          <div className="testimonial">
-            <span className="quote-symbol">“</span>
-            <p>
-              <i>
-                Teak and Twine made the gift giving for our company so easy!
-                They had multiple examples to show me which helped in narrowing
-                our price point and choosing what items we wanted in our box. My
-                account manager (Christina) was very helpful and timely in her
-                responses. The design team took elements from our website and
-                really made our branding look and feel like us. We will
-                definitely use Teak and Twine again in the future!
-              </i>
-            </p>
-            <span className="testimonial-author">SARAH @ WHITMAN PARTNERS</span>
-          </div>
-        </div>
-      </section> */}
 
       <section className="process-steps">
         <p className="section-subtitle">SERIOUSLY SIMPLE PROCESS</p>
@@ -364,59 +309,55 @@ export default function Home() {
           <div className="step">
             <Image
               className="step-image"
-              src="/wishlist.jpg"
+              src="/discuss.png"
               alt="Send us your wishlist"
               width={200}
               height={200}
               unoptimized
             />
-            <h3>Send us your wishlist</h3>
+            <h3>Send Us Your Requirements</h3>
             <p>
-              You send us the numbers and <strong>ALL</strong> the details. We
-              work our gifting magic to create a{" "}
-              <strong>custom proposal</strong> that includes several thoughtful
-              curations and all the decision-making info you (and your boss)
-              need!
+              You share your numbers and all the important details—whether it’s
+              corporate gifting, <strong>procurement</strong> needs, or
+              manufacturing solutions. We then draft a custom proposal that
+              meets your goals, budget, and timeline.
             </p>
           </div>
 
           <div className="step">
             <Image
               className="step-image"
-              src="/proposal.jpg"
+              src="/hand.png"
               alt="Review your proposal"
               width={200}
               height={200}
               unoptimized
             />
-            <h3>Review your proposal</h3>
+            <h3>Review Your Proposal</h3>
             <p>
-              You get ready to pick favorites as you dive into each of the{" "}
-              <strong>
-                handpicked gifts with product insights and pricing
-              </strong>
-              , packaging suite info, and timeline breakdowns. We promise that
-              choosing one when you want them all is the hardest part of the
-              whole process.
+              You get to explore handpicked recommendations with product
+              insights, pricing <strong>breakdowns</strong> and scheduling
+              options. Pick your favorites, request changes, or{" "}
+              <strong>finalize exactly</strong>
+              what you need—every step is tailored to you.
             </p>
           </div>
 
           <div className="step">
             <Image
               className="step-image"
-              src="/relax.jpg"
+              src="/parcel.png"
               alt="Relax and let the gifting begin"
               width={200}
               height={200}
               unoptimized
             />
-            <h3>Relax and let the gifting begin</h3>
+            <h3>Relax and Let Us Deliver</h3>
             <p>
-              You cross gifting off your to-do list and get ready to receive{" "}
-              <strong>all</strong> the credit. We’ll take your approved curation
-              and make it come to life – quickly and carefully. All the
-              sourcing, production, fulfillment, and shipment is in our hands
-              until the gift reaches yours.
+              Cross it off your to-do list and let us handle the rest. Once you
+              approve, we manage production, <strong>packaging,</strong> and
+              logistics, <strong>ensuring </strong>a seamless experience so you
+              can focus on what truly matters.
             </p>
           </div>
         </div>
@@ -452,7 +393,6 @@ export default function Home() {
         </div>
 
         <div className="image-text-section">
-          {/* Image Container with Badge */}
           <div className="image-container">
             <Image
               className="main-image"
@@ -473,79 +413,21 @@ export default function Home() {
 
           {/* Text Content */}
           <div className="text-container">
-            <h2>Fast, friendly, and freaking AMAZING!</h2>
+            <h2>Simplify Your Sourcing, Amplify Your Success</h2>
             <p>
-              You have approximately one million other things to do, so go ahead
-              and cross “follow up with Teak & Twine” off your to-do list.
+              We get it—you’ve got a million items on your to-do list. Let us
+              take “procurement headaches” off that list. From vetting suppliers
+              to ensuring on-time deliveries, our expert team handles the entire
+              supply chain so you can focus on what you do best.
             </p>
             <p>
-              We keep you totally up to date with the status of your project.
-              And don’t be surprised if we send over a few selfies with your
-              products along the way – we just can’t help it!
-            </p>
-          </div>
-        </div>
-
-        <div className="image-text-section rotate">
-          {/* Image Container with Badge */}
-          <div className="image-container">
-            <Image
-              className="main-image"
-              src="/working-girl.jpg"
-              alt="Gifting Process"
-              width={0}
-              height={0}
-              unoptimized
-            ></Image>
-            <div className="image-black-shadow"></div>
-          </div>
-
-          {/* Text Content */}
-          <div className="text-container">
-            <h2>Fast, friendly, and freaking AMAZING!</h2>
-            <p>
-              You have approximately one million other things to do, so go ahead
-              and cross “follow up with Teak & Twine” off your to-do list.
-            </p>
-            <p>
-              We keep you totally up to date with the status of your project.
-              And don’t be surprised if we send over a few selfies with your
-              products along the way – we just can’t help it!
-            </p>
-          </div>
-        </div>
-
-        <div className="image-text-section">
-          {/* Image Container with Badge */}
-          <div className="image-container">
-            <Image
-              className="main-image"
-              src="/working-girl.jpg"
-              alt="Gifting Process"
-              width={0}
-              height={0}
-              unoptimized
-            ></Image>
-            <div className="image-black-shadow"></div>
-          </div>
-
-          {/* Text Content */}
-          <div className="text-container">
-            <h2>Fast, friendly, and freaking AMAZING!</h2>
-            <p>
-              You have approximately one million other things to do, so go ahead
-              and cross “follow up with Teak & Twine” off your to-do list.
-            </p>
-            <p>
-              We keep you totally up to date with the status of your project.
-              And don’t be surprised if we send over a few selfies with your
-              products along the way – we just can’t help it!
+              And yes, we’ll keep you totally up to speed—think regular updates
+              (and maybe a few fun photos) along the way!
             </p>
           </div>
         </div>
 
         <div className="image-text-section rotate">
-          {/* Image Container with Badge */}
           <div className="image-container">
             <Image
               className="main-image"
@@ -560,21 +442,21 @@ export default function Home() {
 
           {/* Text Content */}
           <div className="text-container">
-            <h2>Fast, friendly, and freaking AMAZING!</h2>
+            <h2>Your All-in-One Manufacturing Partner</h2>
             <p>
-              You have approximately one million other things to do, so go ahead
-              and cross “follow up with Teak & Twine” off your to-do list.
+              Need high-grade steel? Corrugated boxes? A partner who can align
+              production with your corporate needs? That’s where we come in.
             </p>
             <p>
-              We keep you totally up to date with the status of your project.
-              And don’t be surprised if we send over a few selfies with your
-              products along the way – we just can’t help it!
+              We oversee everything from raw materials to quality checks, so you
+              can rest easy knowing your project is in capable hands. Oh, and
+              we’ll snap a few behind-the-scenes pics to keep you in the
+              loop—because we believe in transparency every step of the way.
             </p>
           </div>
         </div>
 
         <div className="image-text-section">
-          {/* Image Container with Badge */}
           <div className="image-container">
             <Image
               className="main-image"
@@ -589,18 +471,17 @@ export default function Home() {
 
           {/* Text Content */}
           <div className="text-container">
-            <h2>Fast, friendly, and freaking AMAZING!</h2>
+            <h2>Holiday Cheer, Handled</h2>
             <p>
-              You have approximately one million other things to do, so go ahead
-              and cross “follow up with Teak & Twine” off your to-do list.
+              The festive season is hectic enough—let us make corporate gifting
+              effortless. From carefully curated gift selections to on-time
+              deliveries,
             </p>
             <p>
-              We keep you totally up to date with the status of your project.
-              And don’t be surprised if we send over a few selfies with your
-              products along the way – we just can’t help it!
+              we handle every detail so you can focus on celebrating. Expect an
+              unforgettable unboxing experience that spreads joy long after the
+              holidays are over!
             </p>
-
-            <button id="started">Get Started !</button>
           </div>
         </div>
       </section>
@@ -615,7 +496,7 @@ export default function Home() {
         <ContactForm />
       </section>
 
-      <div className="faq-section">
+      {/* <div className="faq-section">
         <h2>Corporate Gifting FAQs</h2>
         <div className="faq-arrow">↓</div>
 
@@ -636,7 +517,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
       <section className="gift-section">
         {/* Brand Logo Slider */}
