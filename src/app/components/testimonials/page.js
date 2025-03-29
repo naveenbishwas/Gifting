@@ -5,6 +5,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./testimonials.css";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -111,11 +112,14 @@ const TestimonialSlider = () => {
       >
         {testimonials.map((testimonial, index) => (
           <SwiperSlide key={index} className="testimonial-card">
-            <p className="testimonial-text">"{testimonial.text}"</p>
-            <img
+            <p className="testimonial-text">{testimonial.text}</p>
+            <Image
               src={testimonial.logo}
               alt={testimonial.name}
               className="testimonial-logo"
+              width={0}
+              height={0}
+              unoptimized
             />
             <p className="testimonial-name">{testimonial.name}</p>
             <p className="testimonial-position">{testimonial.position}</p>

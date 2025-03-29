@@ -272,7 +272,7 @@ export default function Home() {
             </h2>
             <p className="subtitle">
               At RealStruct, we understand that choosing a real estate partner
-              is a significant decision. Here's why we stand out from the rest.
+              is a significant decision. Here why we stand out from the rest.
             </p>
           </div>
           <div className="stats-container">
@@ -439,7 +439,7 @@ export default function Home() {
         <div className="cta-container">
           <h1>
             Dream Big <br /> Think Bigger
-            <button className="cta-button">LET'S TALK</button> <br /> & Make It
+            <button className="cta-button">LET TALK</button> <br /> & Make It
             Happen!
           </h1>
         </div>
@@ -658,7 +658,7 @@ export default function Home() {
           {/* Left Content */}
           <div className="gift-text">
             <p className="subheading">2024 Corporate Gifts</p>
-            <h2>Check Out What It's Like To Work With Us!</h2>
+            <h2>Check Out What Its Like To Work With Us!</h2>
             <button className="cta-button">Learn More!</button>
           </div>
         </div>
