@@ -254,7 +254,7 @@ export default function Home() {
         <div className="custom-section">
           <h2>
             You know your business. We know how to deliver.
-            <br /> Together, we're unstoppable!
+            <br /> Together, we unstoppable!
           </h2>
           <p>
             Our goal: to be your one-stop partner for corporate procurement,
