@@ -3,10 +3,10 @@ import { useState, useEffect } from "react";
 import "./herobanner.css"; // Import global CSS
 
 const images = [
-  "/gifting.png",
-  "/gifting-3.png",
-  "/gifting-2.png",
-  "/gifting-1.png",
+  "/new-banner1.png",
+  "/new-banner2.png",
+  "/new-banner4.png",
+  "/new-banner3.png",
 ];
 
 export default function BackgroundSlider() {

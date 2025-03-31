@@ -80,7 +80,7 @@ button:hover {
 }
 
 .nav-buttons button {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(0, 0, 0);
   color: white;
   border: none;
   padding: 10px;
@@ -91,24 +91,27 @@ button:hover {
   flex: 1;
   max-width: 30%;
   color: #fff;
+  text-align: left;
 }
 
 .text-section h4 {
   font-size: 14px;
   letter-spacing: 1px;
   margin-bottom: 10px;
+  text-align: left;
 }
 
 .text-section h2 {
   font-size: 3rem;
+  font-weight: bolder;
   line-height: 1.2;
   margin-bottom: 20px;
-  font-weight: 100;
+  text-align: left;
 }
 
 .cta-button {
-  background: black;
-  color: white;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   padding: 12px 20px;
   border: none;
   cursor: pointer;
