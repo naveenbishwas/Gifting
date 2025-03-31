@@ -363,19 +363,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="cta-banner">
-        <div className="cta-banner-left">
-          <h1>Ready to get started?</h1>
-          <p>
-            We’ve helped thousands of companies bring their brands to life with
-            corporate gifting – and we can’t wait to work with you!
-          </p>
-        </div>
-        <div className="cta-banner-right">
-          <button>Book a Call Now</button>
-        </div>
-      </section> */}
-
       <section className="cta-section">
         <div className="cta-container">
           <h1>
@@ -396,18 +383,12 @@ export default function Home() {
           <div className="image-container">
             <Image
               className="main-image"
-              src="/working-girl.jpg"
+              src="/team1.jpg"
               alt="Gifting Process"
               width={0}
               height={0}
               unoptimized
             ></Image>
-            <div className="badge">
-              <p>
-                We’re obsessed with making your gifts come to life – down to
-                every last detail!
-              </p>
-            </div>
             <div className="image-black-shadow"></div>
           </div>
 
@@ -431,7 +412,7 @@ export default function Home() {
           <div className="image-container">
             <Image
               className="main-image"
-              src="/working-girl.jpg"
+              src="/s.jpg"
               alt="Gifting Process"
               width={0}
               height={0}
@@ -460,7 +441,7 @@ export default function Home() {
           <div className="image-container">
             <Image
               className="main-image"
-              src="/working-girl.jpg"
+              src="/gift1.jpg"
               alt="Gifting Process"
               width={0}
               height={0}
