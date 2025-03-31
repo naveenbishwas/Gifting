@@ -17,7 +17,13 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">KRYSS</div>
       <ul className="nav-links">
-        <li
+        <li>
+          <a href="#">Corporate gifting</a>
+        </li>
+        <li>
+          <a href="#">Corporate procurement</a>
+        </li>
+        {/* <li
           onMouseEnter={() => handleMouseEnter("lookbook")}
           onMouseLeave={handleMouseLeave}
         >
@@ -40,11 +46,11 @@ const Navbar = () => {
               <a href="#">Winter & Holiday</a>
             </div>
           )}
-        </li>
+        </li> */}
         <li>
-          <a href="#">Shop</a>
+          <a href="#">See our work</a>
         </li>
-        <li
+        {/* <li
           onMouseEnter={() => handleMouseEnter("corporate")}
           onMouseLeave={handleMouseLeave}
         >
@@ -56,11 +62,11 @@ const Navbar = () => {
               <a href="#">Self-Serve Gifting</a>
             </div>
           )}
-        </li>
+        </li> */}
         <li>
-          <a href="#">See Our Work</a>
+          <a href="#">About us</a>
         </li>
-        <li
+        {/* <li
           onMouseEnter={() => handleMouseEnter("resources")}
           onMouseLeave={handleMouseLeave}
         >
@@ -72,7 +78,8 @@ const Navbar = () => {
               <a href="#">Newsletter Sign-Up</a>
             </div>
           )}
-        </li>
+        </li> */}
+        <li>Contact us</li>
       </ul>
       <button className="contact-button">Contact</button>
     </nav>
