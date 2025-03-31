@@ -3,14 +3,15 @@ import { useState, useEffect } from "react";
 import "./herobanner.css"; // Import global CSS
 
 const images = [
-  "/new-banner1.png",
-  "/new-banner2.png",
   "/new-banner4.png",
+  "/new-banner2.png",
+  "/new-banner1.png",
   "/new-banner3.png",
 ];
 
 export default function BackgroundSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [fade, setFade] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -20,18 +21,26 @@ export default function BackgroundSlider() {
   }, []);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    setFade(true); // Start the fade out effect
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      setFade(false); // Fade in after image change
+    }, 1000); // Match this time with your fade duration
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+    setFade(true);
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      );
+      setFade(false);
+    }, 1000);
   };
 
   return (
     <div
-      className="slider-container"
+      className={`slider-container ${fade ? "fade" : ""}`}
       style={{ backgroundImage: `url(${images[currentIndex]})` }}
     >
       <div className="text-section">
