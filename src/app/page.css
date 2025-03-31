@@ -1,5 +1,5 @@
 /* Main Section */
-
+/* 
 .corporate-container {
   display: flex;
   justify-content: center;
@@ -14,10 +14,9 @@
   padding: 50px;
   color: white;
   margin-top: 4.5%;
-}
+} */
 
-/* Left Text Section */
-.text-section {
+/* .text-section {
   flex: 1;
   max-width: 30%;
 }
@@ -53,14 +52,14 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
 
-/* Form Wrapper to Hold the Black Background and Form */
+
 .form-wrapper {
   position: relative;
   flex: 1;
   max-width: 51%;
 }
 
-/* Black Background Behind Form */
+
 .form-container-black-background {
   position: absolute;
   top: 2%;
@@ -71,7 +70,7 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
   border-radius: 40px;
 }
 
-/* Form Container */
+
 .form-container {
   background: white;
   color: black;
@@ -94,13 +93,13 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
   text-decoration: underline;
 }
 
-/* Form Layout */
+
 .gifting-form {
   display: flex;
   flex-direction: column;
 }
 
-/* Input Fields */
+
 .form-group {
   display: flex;
   gap: 15px;
@@ -116,7 +115,7 @@ input[type="date" i]::-webkit-calendar-picker-indicator {
   color: black;
 }
 
-/* Textarea */
+
 textarea {
   width: 100%;
   padding: 12px;
@@ -126,7 +125,7 @@ textarea {
   background-color: white;
 }
 
-/* Submit Button */
+
 .submit-button {
   background: black;
   color: white;
@@ -141,7 +140,7 @@ textarea {
 
 .submit-button:hover {
   background: #222;
-}
+} */
 
 .b-w-w-df {
   display: flex;

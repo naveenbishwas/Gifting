@@ -7,50 +7,10 @@ import TestimonialSlider from "./components/testimonials/page";
 import ContactForm from "./components/contactform/page";
 import { useState } from "react";
 import Footer from "./components/footer/page";
+import CorporateGiftingSlider from "./components/herobanner/page";
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(null);
-
-  const faqs = [
-    {
-      question:
-        "How can I learn more about what it's like working with Teak & Twine?",
-      answer:
-        "You can book a call with our team to discuss all the details of our gifting process.",
-    },
-    {
-      question: "Can you add our company logo to the gifts?",
-      answer:
-        "Yes! We offer branded packaging, custom inserts, and more to reflect your company branding.",
-    },
-    {
-      question:
-        "Do we have to provide proofs for branded packaging or inserts?",
-      answer:
-        "Yes, we will send you proofs for approval before printing to ensure everything looks perfect.",
-    },
-    {
-      question: "What if we don’t have our recipients’ addresses?",
-      answer:
-        "No worries! We have a seamless address collection process to gather recipient details.",
-    },
-    {
-      question: "Can our recipients choose their own gift?",
-      answer:
-        "Absolutely! We offer recipient-choice gifting solutions for a personalized experience.",
-    },
-    {
-      question:
-        "How can I learn more about what it's like working with Teak & Twine?",
-      answer:
-        "You can book a call with our team to discuss all the details of our gifting process.",
-    },
-    {
-      question: "What if we don’t have our recipients’ addresses?",
-      answer:
-        "No worries! We have a seamless address collection process to gather recipient details.",
-    },
-  ];
 
   const toggleFaq = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -68,7 +28,7 @@ export default function Home() {
   return (
     <div className="main-container">
       <Navbar />
-      <section className="corporate-container">
+      {/* <section className="corporate-container">
         <div className="text-section">
           <h4>CORPORATE GIFTING</h4>
           <h2>
@@ -79,10 +39,8 @@ export default function Home() {
         </div>
 
         <div className="form-wrapper">
-          {/* Black background behind form */}
           <div className="form-container-black-background"></div>
 
-          {/* Main form */}
           <div className="form-container">
             <p>
               Fill out the form if you’re looking for <strong>50+ gifts</strong>
@@ -131,7 +89,9 @@ export default function Home() {
             </form>
           </div>
         </div>
-      </section>
+      </section> */}
+
+      <CorporateGiftingSlider />
 
       <div className="b-w-w">
         <div className="b-w-w-df">
