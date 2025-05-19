@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./navbar.css";
+import Link from "next/link";
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(null);
@@ -15,13 +16,15 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">KRYSS</div>
+      <Link href="/">
+        <div className="logo">KRYSS</div>
+      </Link>
       <ul className="nav-links">
-        <li>
+        {/* <li>
           <a href="#">Corporate gifting</a>
-        </li>
+        </li> */}
         <li>
-          <a href="#">Corporate procurement</a>
+          <a href="/components/collections">Corporate procurement</a>
         </li>
         {/* <li
           onMouseEnter={() => handleMouseEnter("lookbook")}

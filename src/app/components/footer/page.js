@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <div className="footer-logo">T T</div>
+          <div className="footer-logo">KRYSS</div>
 
           <div className="footer-links">
             <div className="footer-column">
@@ -118,7 +118,7 @@ const Footer = () => {
 
       {/* Bottom Footer - Copyright & Privacy */}
       <div className="footer-bottom">
-        <p>© 2025 Teak and Twine. All rights reserved.</p>
+        <p>© 2025 KRYSS. All rights reserved.</p>
         <a href="#">Our privacy policy</a>
       </div>
     </footer>

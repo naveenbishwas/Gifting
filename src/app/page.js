@@ -28,68 +28,6 @@ export default function Home() {
   return (
     <div className="main-container">
       <Navbar />
-      {/* <section className="corporate-container">
-        <div className="text-section">
-          <h4>CORPORATE GIFTING</h4>
-          <h2>
-            We know gifting and merch isn’t your full-time job, that’s why it’s
-            ours.
-          </h2>
-          <button className="cta-button">Start Gifting!</button>
-        </div>
-
-        <div className="form-wrapper">
-          <div className="form-container-black-background"></div>
-
-          <div className="form-container">
-            <p>
-              Fill out the form if you’re looking for <strong>50+ gifts</strong>
-              , and our team will be in touch within{" "}
-              <strong>1 business day</strong> (usually sooner!). Or{" "}
-              <a href="#">book a call</a>.
-            </p>
-            <form className="gifting-form">
-              <div className="form-group">
-                <input type="text" placeholder="First name*" required />
-                <input type="text" placeholder="Last name*" required />
-              </div>
-              <div className="form-group">
-                <input type="email" placeholder="Email*" required />
-                <input type="text" placeholder="Phone number*" required />
-              </div>
-              <div className="form-group">
-                <input
-                  type="number"
-                  placeholder="Number of gifts needed*"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Total Gifting Budget*"
-                  required
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  id="date"
-                  type="date"
-                  placeholder="Gifts needed by date*"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="How did you hear about us?*"
-                  required
-                />
-              </div>
-              <textarea placeholder="Message*" rows="4"></textarea>
-              <button type="submit" className="submit-button">
-                Submit
-              </button>
-            </form>
-          </div>
-        </div>
-      </section> */}
 
       <CorporateGiftingSlider />
 
@@ -335,7 +273,7 @@ export default function Home() {
 
       <section className="apart">
         <div className="apart-heading">
-          <p>The Teak & Twine difference</p>
+          <p>KRYSS difference</p>
           <h1>Here’s what sets us apart:</h1>
         </div>
 

@@ -22,6 +22,10 @@
   font-family: serif;
 }
 
+.logo:hover {
+  cursor: pointer;
+}
+
 /* Navigation Links */
 .nav-links {
   list-style: none;

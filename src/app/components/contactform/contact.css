@@ -14,16 +14,6 @@
   margin-top: 3%;
 }
 
-.form-subtext {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.form-subtext a {
-  color: black;
-  text-decoration: underline;
-}
-
 /* Form */
 .contact-form {
   display: flex;

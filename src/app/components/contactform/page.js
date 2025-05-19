@@ -71,10 +71,6 @@ const ContactForm = () => {
         day (usually sooner!). Let us know your requirements, and we’ll help
         bring your project to life.
       </p>
-      <p className="form-subtext">
-        If you just can’t wait, <a href="#">book a call</a> or call us at
-        571-490-7071
-      </p>
 
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="form-group">

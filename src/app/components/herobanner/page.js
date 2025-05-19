@@ -44,7 +44,7 @@ export default function BackgroundSlider() {
       style={{ backgroundImage: `url(${images[currentIndex]})` }}
     >
       <div className="text-section">
-        <h4>CORPORATE GIFTING</h4>
+        <h4>CORPORATE PROCUREMENT</h4>
         <h2>
           We know gifting and merch isn’t your full-time job, that’s why it’s
           ours.
