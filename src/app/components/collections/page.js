@@ -23,8 +23,12 @@ export default function Collection() {
 
         <div className="product-grid">
           {pdpData.map((product) => (
-            <Link href={`/products/${product.url}`} className="product-box">
-              <div key={product.id}>
+            <Link
+              href={`/products/${product.url}`}
+              className="product-box"
+              key={product.id}
+            >
+              <div>
                 <Image
                   src={product.imageUrl}
                   alt={product.title}
