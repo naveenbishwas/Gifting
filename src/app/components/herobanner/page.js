@@ -49,7 +49,7 @@ export default function BackgroundSlider() {
           We know gifting and merch isn’t your full-time job, that’s why it’s
           ours.
         </h2>
-        <button className="cta-button">Start Gifting!</button>
+        <button className="cta-button">Sign up</button>
       </div>
 
       <div className="form-wrapper">
@@ -57,9 +57,9 @@ export default function BackgroundSlider() {
 
         <div className="form-container">
           <p>
-            Fill out the form if you’re looking for <strong>50+ gifts</strong>,
-            and our team will be in touch within <strong>1 business day</strong>{" "}
-            (usually sooner!). Or <a href="#">book a call</a>.
+            Fill out the form, and our team will be in touch within{" "}
+            <strong>1 business day</strong> (usually sooner!). Or{" "}
+            <a href="#">book a call</a>.
           </p>
           <form className="gifting-form">
             <div className="form-group">
@@ -70,14 +70,14 @@ export default function BackgroundSlider() {
               <input type="email" placeholder="Email*" required />
               <input type="text" placeholder="Phone number*" required />
             </div>
-            <div className="form-group">
+            {/* <div className="form-group">
               <input
                 type="number"
                 placeholder="Number of gifts needed*"
                 required
               />
               <input type="text" placeholder="Total Gifting Budget*" required />
-            </div>
+            </div> */}
             <div className="form-group">
               <input
                 id="date"

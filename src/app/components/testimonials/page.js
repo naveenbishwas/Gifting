@@ -9,37 +9,37 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    text: "Teak & Twine made the entire process of putting together client and employee gifts easy and fun. Each of the final products they have delivered for me have completely wowed us!",
+    text: "KRYYS transformed our corporate procurement workflow. From sourcing to delivery, every step was seamless and professional. Our stakeholders were impressed with the results.",
     logo: "/revalize-logo.png",
     name: "Carley",
-    position: "Product Marketing Manager at Revalize",
+    position: "Procurement Manager at Revalize",
   },
   {
-    text: "Teak & Twine made our client gift giving an effortless and seamless process. The gifts they offer are unique, creative, and carefully considered!",
+    text: "Their curated corporate gifts checked every box — compliance, creativity, and speed. KRYYS is now our go-to for enterprise gifting solutions.",
     logo: "/slib-logo.png",
     name: "Amy",
-    position: "Senior Living Investment Brokerage",
+    position: "Operations Lead at SLIB",
   },
   {
-    text: "It was a delight to work with Teak & Twine for a second year in a row. We were experiencing a little swag fatigue, but they provided great ideas and helped to curate another thoughtful gift for our employees.",
+    text: "We needed a vendor who understood procurement protocols and brand alignment. KRYYS nailed both and made it easy to scale our gifting program.",
     logo: "/evernote-logo.png",
     name: "Sara",
-    position: "Evernote",
+    position: "Procurement Coordinator at Evernote",
   },
   {
-    text: "I'm always amazed by the beautiful, customized holiday boxes Teak & Twine designs for our customers. They offer the most amazing white glove service and effortless purchasing process!",
+    text: "KRYYS delivered an outstanding procurement experience with fast approvals, great vendor support, and on-brand gifting solutions that wowed our clients.",
     logo: "/zendesk-logo.png",
     name: "Liza",
-    position: "Zendesk",
+    position: "Procurement Officer at Zendesk",
   },
   {
-    text: "Before discovering Teak & Twine, I would spend hours researching online to find the perfect gift. Teak & Twine simplified and streamlined this process.",
+    text: "With KRYYS, our corporate gifting process is now faster, more efficient, and perfectly aligned with our procurement standards. Total time-saver.",
     logo: "/toast-logo.png",
     name: "Vicky",
     position: "Executive Assistant at Toast Inc.",
   },
   {
-    text: "It's wonderful to have a company that we can rely on for beautiful gift options, great service, excellent product quality, and fast turnaround times!",
+    text: "KRYYS helped us meet strict timelines, stayed within budget, and provided exceptional service throughout. A procurement partner we trust.",
     logo: "/veritas-logo.png",
     name: "Andrew",
     position: "Executive Director at Veritas",

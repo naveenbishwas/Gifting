@@ -114,6 +114,7 @@
 .social-icons {
   display: flex;
   gap: 15px;
+  display: none;
 }
 
 .social-icons a img {
@@ -148,8 +149,11 @@
   }
 
   .footer-links {
-    flex-direction: column;
-    gap: 20px;
+    margin-top: 15%;
+    flex-direction: row;
+    align-items: flex-start;
+    text-align: left;
+    gap: 50px;
   }
 
   .footer-right {

@@ -68,3 +68,56 @@
 .button:hover {
   background-color: #275852;
 }
+
+.price-wrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .pdp-container {
+    flex-direction: column;
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .product-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .title {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .price-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    display: none;
+  }
+
+  .description {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .left-section {
+    margin-top: 12%;
+  }
+
+  .button {
+    align-self: center;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .left-section,
+  .right-section {
+    flex: unset;
+    width: 100%;
+    align-items: baseline;
+  }
+}

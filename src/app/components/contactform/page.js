@@ -64,7 +64,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="form-container">
+    <div className="form-container-home">
       <h1>Ready to Explore Our Corporate Solutions?</h1>
       <p className="form-header">
         Fill out the form below, and we’ll get back to you within one business
@@ -122,7 +122,7 @@ const ContactForm = () => {
           />
         </div>
 
-        <div className="form-group">
+        {/* <div className="form-group">
           <input
             type="number"
             name="giftsNeeded"
@@ -139,7 +139,7 @@ const ContactForm = () => {
             onChange={handleChange}
             className={errors.budget ? "error-input" : ""}
           />
-        </div>
+        </div> */}
 
         <div className="form-group">
           <input

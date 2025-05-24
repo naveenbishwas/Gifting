@@ -150,9 +150,13 @@ export default function Home() {
 
       <section>
         <div className="custom-section">
-          <h2>
+          <h2 className="desktop">
             You know your business. We know how to deliver.
             <br /> Together, we unstoppable!
+          </h2>
+          <h2 className="mobile">
+            You know your business. We know how to deliver. Together, we
+            unstoppable!
           </h2>
           <p>
             Our goal: to be your one-stop partner for corporate procurement,
@@ -200,7 +204,8 @@ export default function Home() {
       <section className="process-steps">
         <p className="section-subtitle">SERIOUSLY SIMPLE PROCESS</p>
         <h2 className="section-title">
-          Gifts ready for clients or employees in just a few short weeks
+          Simplify Corporate Procurement with Curated Gift, That Elevate Brand
+          Value, Delight Clients.
         </h2>
 
         <div className="steps-container">
@@ -263,8 +268,13 @@ export default function Home() {
 
       <section className="cta-section">
         <div className="cta-container">
-          <h1>
+          <h1 className="desktop">
             Dream Big <br /> Think Bigger
+            <button className="cta-button">LET TALK</button> <br /> & Make It
+            Happen!
+          </h1>
+          <h1 className="mobile">
+            Dream Big Think Bigger
             <button className="cta-button">LET TALK</button> <br /> & Make It
             Happen!
           </h1>
@@ -371,32 +381,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact-form">
+      <section className="contact-form-copy">
         <ContactForm />
       </section>
-
-      {/* <div className="faq-section">
-        <h2>Corporate Gifting FAQs</h2>
-        <div className="faq-arrow">↓</div>
-
-        <div className="faq-list">
-          {faqs.map((faq, index) => (
-            <div key={index} className="faq-item">
-              <div className="faq-question" onClick={() => toggleFaq(index)}>
-                <span>{faq.question}</span>
-                <span className="faq-toggle">
-                  {openIndex === index ? "−" : "+"}
-                </span>
-              </div>
-              <div
-                className={`faq-answer ${openIndex === index ? "open" : ""}`}
-              >
-                {faq.answer}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div> */}
 
       <section className="gift-section">
         {/* Brand Logo Slider */}
