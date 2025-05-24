@@ -838,6 +838,11 @@
     display: none;
   }
 
+  .section-title {
+    font-size: 20px !important;
+    line-height: 1.3;
+  }
+
   .mobile {
     display: block;
   }
@@ -907,10 +912,10 @@
     margin-top: 16%;
   }
 
-  .testimonial-section .section-title {
+  /* .testimonial-section .section-title {
     font-size: 23px;
     margin-bottom: 28px;
-  }
+  } */
 
   .testimonial-section .testimonial-navigation button {
     width: 40px;
