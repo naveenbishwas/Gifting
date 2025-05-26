@@ -36,112 +36,124 @@ export default function Home() {
           <div className="brand-logos">
             <span>
               <Image
-                src={"/indeedlogo.webp"}
+                src={"./indeedlogo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
             <span>
               <Image
-                src={"/Gong-Logo.webp"}
+                src={"./Gong-Logo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
             <span>
               <Image
-                src={"/googlelogo.webp"}
+                src={"./googlelogo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
             <span>
               <Image
-                src={"/microsoftlogo.webp"}
+                src={"./microsoftlogo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
             <span>
               <Image
-                src={"/espnlogo.webp"}
+                src={"./espnlogo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
             <span>
               <Image
-                src={"/toastlogo.webp"}
+                src={"./toastlogo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
           </div>
           <div className="brand-logos">
             <span>
               <Image
-                src={"/indeedlogo.webp"}
+                src={"./indeedlogo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
             <span>
               <Image
-                src={"/Gong-Logo.webp"}
+                src={"./Gong-Logo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
             <span>
               <Image
-                src={"/googlelogo.webp"}
+                src={"./googlelogo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
             <span>
               <Image
-                src={"/microsoftlogo.webp"}
+                src={"./microsoftlogo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
             <span>
               <Image
-                src={"/espnlogo.webp"}
+                src={"./espnlogo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
             <span>
               <Image
-                src={"/toastlogo.webp"}
+                src={"./toastlogo.webp"}
                 alt="brand-img"
                 width={0}
                 height={0}
                 unoptimized
+                priority
               ></Image>
             </span>
           </div>

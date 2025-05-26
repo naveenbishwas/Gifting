@@ -207,9 +207,6 @@
     padding: 15px 20px;
   }
 
-  #cancel-icon {
-  }
-
   .menu-toggle svg {
     transition: all 0.3s ease;
     width: 20px;

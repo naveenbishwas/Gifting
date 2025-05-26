@@ -156,6 +156,10 @@ textarea {
   display: none;
 }
 
+input::-webkit-datetime-edit-fields-wrapper {
+  color: #757575;
+}
+
 /* ---------- MEDIA QUERIES ---------- */
 
 @media (min-width: 768px) {
@@ -187,6 +191,10 @@ textarea {
 @media (max-width: 480px) {
   .text-section h2 {
     font-size: 1.5rem;
+  }
+
+  .custom-section {
+    padding: 40px 20px !important;
   }
 
   .slider-container {

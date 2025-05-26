@@ -113,7 +113,7 @@ const Navbar = () => {
           )}
         </li> */}
           <li>
-            <a href="#">About us</a>
+            <a href="/components/about-us">About us</a>
           </li>
           {/* <li
           onMouseEnter={() => handleMouseEnter("resources")}
