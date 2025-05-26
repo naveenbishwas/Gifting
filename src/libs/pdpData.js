@@ -26,8 +26,8 @@ export const pdpData = [
     title: "Branded Travel Kits",
     description:
       "Branded travel kits offer a practical and stylish gifting solution, featuring essential travel accessories in a compact design. Ideal for corporate giveaways, they enhance brand visibility on every journey.",
-    imageUrl: "/bag.jpg",
-    url: "/branded-travel-kits",
+    imageUrl: "/travel-kit.png",
+    url: "branded-travel-kits",
     price: 1250,
     originalPrice: 1799,
     bgColor: "#f0f9ff",
@@ -37,8 +37,8 @@ export const pdpData = [
     title: "Metal Table Clocks or Crystal Showpieces",
     description:
       "Metal and plastic pens, great for bulk gifting or desk accessories. Options for laser engraving or full-color logo printing.",
-    imageUrl: "/bag.jpg",
-    url: "/pdp-one.png",
+    imageUrl: "/metal-clock.png",
+    url: "pdp-one.png",
     price: 799,
     originalPrice: 1099,
     bgColor: "#fef2f2",
@@ -59,7 +59,7 @@ export const pdpData = [
     title: "Premium Corporate Jackets / Blazers",
     description:
       "Metal and plastic pens, great for bulk gifting or desk accessories. Options for laser engraving or full-color logo printing",
-    imageUrl: "/pdp-one.png",
+    imageUrl: "/jacket.png",
     url: "corporate-jackets",
     price: 1899,
     originalPrice: 2499,
@@ -70,7 +70,7 @@ export const pdpData = [
     title: "Branded Gift Vouchers or Subscription Boxes",
     description:
       "Metal and plastic pens, great for bulk gifting or desk accessories. Options for laser engraving or full-color logo printing.",
-    imageUrl: "/pdp-one.png",
+    imageUrl: "/vouchers.png",
     url: "gift-vouchers-subscription-boxes",
     price: 999,
     originalPrice: 1399,
@@ -92,7 +92,7 @@ export const pdpData = [
     title: "Luxury Pen Sets",
     description:
       "Metal and plastic pens, great for bulk gifting or desk accessories. Options for laser engraving or full-color logo printing.",
-    imageUrl: "/pen.jpg",
+    imageUrl: "/pent-setss.png",
     url: "luxury-pen-sets-2",
     price: 749,
     originalPrice: 999,
@@ -125,7 +125,7 @@ export const pdpData = [
     title: "Steel Water Bottles",
     description:
       "Leak-proof, BPA-free stainless steel bottles with a sleek finish. Ideal for eco-friendly branding. Custom laser engraving and printed logo options available.",
-    imageUrl: "/pdp-one.png",
+    imageUrl: "/bottle.png",
     url: "steel-water-bottles",
     price: 699,
     originalPrice: 999,
@@ -136,7 +136,7 @@ export const pdpData = [
     title: "Sippers or Coffee Mugs",
     description:
       "Customized sippers or coffee mugs are perfect for everyday use and brand promotion. With personalization options, they make functional, memorable gifts that keep your brand visible at home or the office.",
-    imageUrl: "/pdp-one.png",
+    imageUrl: "/mugs.png",
     url: "coffee-mugs",
     price: 399,
     originalPrice: 649,
@@ -158,7 +158,7 @@ export const pdpData = [
     title: "Basic Laptop Sleeves or File Folders",
     description:
       "Executive and budget-friendly diaries with hard/soft covers, PU leather finish, and ruled or planner formats. Customization includes logo embossing, inside page branding, and bookmarks.",
-    imageUrl: "/pdp-one.png",
+    imageUrl: "/sleeves.png",
     url: "laptop-sleeves",
     price: 699,
     originalPrice: 1049,
@@ -202,7 +202,7 @@ export const pdpData = [
     title: "Customized Gift Hampers",
     description:
       "Customized gift hampers with gourmet snacks, dry fruits, and wine accessories make elegant, thoughtful presents—ideal for any occasion, blending taste, luxury, and personalization in a premium package.",
-    imageUrl: "/pdp-one.png",
+    imageUrl: "/bag.jpg",
     url: "gift-hampers",
     price: 2250,
     originalPrice: 2999,

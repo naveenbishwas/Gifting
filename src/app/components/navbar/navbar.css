@@ -35,20 +35,26 @@
 
 .nav-links li {
   position: relative;
+  transition: color 0.3s ease-in-out;
   padding: 10px 0;
 }
 
 .nav-links a {
   text-decoration: none;
   color: black;
-  font-size: 16px;
+  /* font-size: 16px; */
   font-weight: 500;
   padding: 10px;
-  transition: color 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  transform: scale(1.1);
+  font-size: unset;
+  word-spacing: unset;
+  letter-spacing: unset;
 }
 
 /* Dropdown Menu */
