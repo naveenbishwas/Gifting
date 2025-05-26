@@ -14,29 +14,23 @@ const Footer = () => {
               <h4>Menu</h4>
               <ul>
                 <li>
-                  <a href="#">The Lookbook</a>
+                  <a href="/components/infastructure">Infastructure</a>
                 </li>
                 <li>
-                  <a href="#">Shop All</a>
+                  <a href="/components/collections">Corporate Procurement</a>
                 </li>
                 <li>
-                  <a href="#">Corporate Gift Boxes</a>
+                  <a href="#">See our work</a>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <a href="/components/about-us">About us</a>
                 </li>
                 <li>
-                  <a href="#">Book a Call</a>
-                </li>
-                <li>
-                  <a href="#">571-490-7071</a>
-                </li>
-                <li>
-                  <a href="#">Shipping and Returns</a>
+                  <a href="#">Contact us</a>
                 </li>
               </ul>
             </div>
-            <div className="footer-column">
+            {/* <div className="footer-column">
               <h4>About</h4>
               <ul>
                 <li>
@@ -52,7 +46,7 @@ const Footer = () => {
                   <a href="#">Careers</a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
 
