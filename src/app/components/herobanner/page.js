@@ -49,8 +49,7 @@ export default function BackgroundSlider() {
       <div className="text-section">
         <h4>CORPORATE PROCUREMENT</h4>
         <h2>
-          We know gifting and merch isn’t your full-time job, that’s why it’s
-          ours.
+          We know gifting and merch isnt your full-time job, thats why its ours.
         </h2>
         <button className="cta-button">Sign up</button>
       </div>
