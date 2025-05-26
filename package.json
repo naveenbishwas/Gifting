@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gsap": "^3.13.0",
     "keen-slider": "^6.8.6",
     "next": "15.2.3",
     "react": "^19.0.0",
