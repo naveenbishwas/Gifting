@@ -9,40 +9,40 @@ import Image from "next/image";
 
 const testimonials = [
   {
+    text: "KRYYS helped us meet strict timelines, stayed within budget, and provided exceptional service throughout. A procurement partner we trust.",
+    logo: "/boy.png",
+    name: "Andrew",
+    position: "Executive Director at Veritas",
+  },
+  {
     text: "KRYYS transformed our corporate procurement workflow. From sourcing to delivery, every step was seamless and professional. Our stakeholders were impressed with the results.",
-    logo: "/revalize-logo.png",
+    logo: "/girl.png",
     name: "Carley",
     position: "Procurement Manager at Revalize",
   },
   {
     text: "Their curated corporate gifts checked every box — compliance, creativity, and speed. KRYYS is now our go-to for enterprise gifting solutions.",
-    logo: "/slib-logo.png",
+    logo: "/girl.png",
     name: "Amy",
     position: "Operations Lead at SLIB",
   },
   {
     text: "We needed a vendor who understood procurement protocols and brand alignment. KRYYS nailed both and made it easy to scale our gifting program.",
-    logo: "/evernote-logo.png",
+    logo: "/girl.png",
     name: "Sara",
     position: "Procurement Coordinator at Evernote",
   },
   {
     text: "KRYYS delivered an outstanding procurement experience with fast approvals, great vendor support, and on-brand gifting solutions that wowed our clients.",
-    logo: "/zendesk-logo.png",
+    logo: "/boy.png",
     name: "Liza",
     position: "Procurement Officer at Zendesk",
   },
   {
     text: "With KRYYS, our corporate gifting process is now faster, more efficient, and perfectly aligned with our procurement standards. Total time-saver.",
-    logo: "/toast-logo.png",
+    logo: "/boy.png",
     name: "Vicky",
     position: "Executive Assistant at Toast Inc.",
-  },
-  {
-    text: "KRYYS helped us meet strict timelines, stayed within budget, and provided exceptional service throughout. A procurement partner we trust.",
-    logo: "/veritas-logo.png",
-    name: "Andrew",
-    position: "Executive Director at Veritas",
   },
 ];
 
