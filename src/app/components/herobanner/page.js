@@ -1,6 +1,8 @@
 "use client"; // Ensure it runs only on the client side
 import { useState, useEffect } from "react";
 import "./herobanner.css"; // Import global CSS
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
 const images = [
   "/new-banner4.png",
@@ -12,6 +14,7 @@ const images = [
 export default function BackgroundSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -78,19 +81,25 @@ export default function BackgroundSlider() {
               />
               <input type="text" placeholder="Total Gifting Budget*" required />
             </div> */}
-            <div className="form-group">
+            {/* <div className="form-group">
               <input
                 id="date"
                 type="date"
                 placeholder="Gifts needed by date*"
                 required
               />
+              <DatePicker
+                selected={selectedDate}
+                onChange={(date) => setSelectedDate(date)}
+                placeholderText="Gifts needed by date*"
+                className="custom-input"
+              />
               <input
                 type="text"
                 placeholder="How did you hear about us?*"
                 required
               />
-            </div>
+            </div> */}
             <textarea placeholder="Message*" rows="4"></textarea>
             <button type="submit" className="submit-button">
               Submit

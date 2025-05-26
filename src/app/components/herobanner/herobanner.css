@@ -156,8 +156,15 @@ textarea {
   display: none;
 }
 
-input::-webkit-datetime-edit-fields-wrapper {
-  color: #757575;
+input[type="date"] {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
 /* ---------- MEDIA QUERIES ---------- */
