@@ -14,7 +14,7 @@ const Footer = () => {
               <h4>Menu</h4>
               <ul>
                 <li>
-                  <a href="/components/infastructure">Infastructure</a>
+                  <a href="/components/infastructure">Infrastructure</a>
                 </li>
                 <li>
                   <a href="/components/collections">Corporate Procurement</a>

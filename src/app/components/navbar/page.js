@@ -67,7 +67,7 @@ const Navbar = () => {
 
         <ul className="nav-links">
           <li>
-            <a href="/components/infastructure">Infastructure</a>
+            <a href="/components/infastructure">Infrastructure</a>
           </li>
           <li>
             <a href="/components/collections">Corporate Procurement</a>
