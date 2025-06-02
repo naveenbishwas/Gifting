@@ -1,330 +1,672 @@
 "use client";
-
-import React from "react";
-import "./infastructure.css";
-import Image from "next/image";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import "./infastructure.css";
 import Navbar from "../navbar/page";
 import Footer from "../footer/page";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
-const Page = () => {
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [isVisible, setIsVisible] = useState(false);
+const Infastructure = () => {
   const [isNavbarVisible, setNavbarVisible] = useState(false);
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const textRef = useRef(null);
 
   const toggleNavbar = () => {
-    setNavbarVisible((prev) => !prev); // Toggle visibility
+    setNavbarVisible((prev) => !prev);
   };
 
   const closeNavbar = () => {
-    setNavbarVisible(false); // Close when clicking cancel
+    setNavbarVisible(false);
   };
 
-  //   useEffect(() => {
-  //     gsap.registerPlugin(ScrollTrigger);
-  //     gsap.to("#frame", {
-  //       x: -455,
-  //       duration: 1,
-  //       ease: "power1",
-  //       scrollTrigger: {
-  //         trigger: "#frame",
-  //         start: "top 80%",
-  //         end: "top 50%",
-  //         scrub: false,
-  //       },
-  //     });
-
-  //     gsap.to(".topic-headng p", {
-  //       x: 75,
-  //       duration: 1,
-  //       ease: "power1",
-  //       scrollTrigger: {
-  //         trigger: "#frame",
-  //         start: "top 90%",
-  //         end: "top 50%",
-  //         scrub: false,
-  //       },
-  //     });
-  //     if (window.innerWidth <= 768) {
-  //       gsap.to("#frame", {
-  //         x: -105,
-  //         duration: 1,
-  //         ease: "power1",
-  //         scrollTrigger: {
-  //           trigger: "#frame",
-  //           start: "top 80%",
-  //           end: "top 50%",
-  //           scrub: false,
-  //         },
-  //       });
-  //       gsap.to(".topic-headng p", {
-  //         x: 36,
-  //         duration: 1,
-  //         ease: "power1",
-  //         scrollTrigger: {
-  //           trigger: "#frame",
-  //           start: "top 90%",
-  //           end: "top 50%",
-  //           scrub: false,
-  //         },
-  //       });
-  //     }
-  //   }, []);
-
-  const openImagePopup = (src) => {
-    setSelectedImage(src);
-    setTimeout(() => setIsVisible(true), 0);
-  };
-
-  const closeImagePopup = () => {
-    setIsVisible(false);
-    setTimeout(() => setSelectedImage(null), 300);
-  };
+  const [sliderRef] = useKeenSlider(
+    {
+      loop: true,
+    },
+    [
+      (slider) => {
+        let timeout;
+        let mouseOver = false;
+        function clearNextTimeout() {
+          clearTimeout(timeout);
+        }
+        function nextTimeout() {
+          clearTimeout(timeout);
+          if (mouseOver) return;
+          timeout = setTimeout(() => {
+            slider.next();
+          }, 1000);
+        }
+        slider.on("created", () => {
+          slider.container.addEventListener("mouseover", () => {
+            mouseOver = true;
+            clearNextTimeout();
+          });
+          slider.container.addEventListener("mouseout", () => {
+            mouseOver = false;
+            nextTimeout();
+          });
+          nextTimeout();
+        });
+        slider.on("dragStarted", clearNextTimeout);
+        slider.on("animationEnded", nextTimeout);
+        slider.on("updated", nextTimeout);
+      },
+    ]
+  );
 
   return (
-    <div className="main-container">
-      <Navbar />
-      <section className="topic-headng">
-        <div className="blue-border">
-          <h1 id="frame">PEB Frames </h1>
-          <p>
-            A PEB (Pre-Engineered Building) frame in valves typically refers to
-            a structural framework designed to house and support industrial
-            valve systems within a larger infrastructure. These frames are
-            custom-engineered to meet specific requirements, providing a stable
-            and durable environment for valve operation.
-          </p>
-
-          <p>
-            PEB frames are commonly used in industries like oil and gas, water
-            treatment, and manufacturing, where valves play a critical role in
-            controlling the flow of fluids or gases. The modular nature of PEB
-            frames allows for easy installation, expansion, and maintenance.
-            They are constructed using materials such as steel or aluminum to
-            ensure resistance to environmental factors and operational stress,
-            ensuring longevity and reliable performance in demanding conditions.
-          </p>
-        </div>
-      </section>
-
-      <section className="topic-images">
-        <div className="row-one">
-          <div className="row-left">
-            <h2>1. CLEAR SPAN (CS):</h2>
-            <p>
-              This type of frame is the most preferred and widely used
-              worldwide. It offers clear access to loading and stacking function
-              on within the shed. As the pillars or columns are coming at both
-              ends, it gives a very spacious and airy look to the entire re
-              shed. We can design these sheds for a width of up to 150 meters.
-              However, the water discharge from these types of frames is on both
-              sides of the shed as this is a TWO SLOPE frame.
-            </p>
-          </div>
-          <div className="row-right">
-            <div
-              className="img-box"
-              onClick={() => {
-                openImagePopup("/fed1.png");
-              }}
-            >
-              <span>
-                <h3>CLEAR SPAN (CS)</h3>
-              </span>
-              <span>
-                <Image
-                  id="frame-img-one"
-                  className="frame-imgs"
-                  src="/fed1.png"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div className="row-two rotate">
-          <div className="row-left">
-            <h2>2. MULTI SPAN (MS)</h2>
-            <p>
-              This type of frame is most suitable for clients who want a wide
-              shed but do not necessarily want it to be clear span because it
-              gives us the economy of Two Sloped Structure and the columns in
-              between distributes the load and thus reduces the weight of the
-              structure. It is the most economical form of frame for large span
-              buildings. The water discharge is however done from the two side
-              of the slope.
-            </p>
-          </div>
-          <div className="row-right">
-            <div
-              className="img-box"
-              onClick={() => {
-                openImagePopup("/fed2.png");
-              }}
-            >
-              <span>
-                <h3>MULTI SPAN (MS)</h3>
-              </span>
-              <span>
-                <Image
-                  id="frame-img-one"
-                  className="frame-imgs"
-                  src="/fed2.png"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div className="row-three">
-          <div className="row-left">
-            <h2>3.SINGLE SLOPE (SS)</h2>
-            <p>
-              This type of frames are the preferred choice when clients wants or
-              has restriction on to drain water of both sides of the shed. It is
-              also chosen by clients in case their existing ng sheds require an
-              expansion in width but is not designed to support the load of a
-              lean to shed. In case these sheds are very wide then is becomes
-              economical to make the same in Multi span.
-            </p>
-          </div>
-          <div className="row-right">
-            <div
-              className="img-box"
-              onClick={() => {
-                openImagePopup("/fed3.png");
-              }}
-            >
-              <span>
-                <h3>SINGLE SLOPE (SS)</h3>
-              </span>
-              <span>
-                <Image
-                  id="frame-img-one"
-                  className="frame-imgs"
-                  src="/fed3.png"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div className="row-four rotate">
-          <div className="row-left">
-            <h2>4. MULTI GABLE (MG)</h2>
-            <p>
-              This type of frame is the used in case of wide shed but are more
-              economical than the Multi Span frame type. It is lighter because
-              the trusses are smaller hence economical but it comes with a rider
-              that it may has a water discharge in the center of the shed which
-              would require an internal drainage line, which is not preferred in
-              most of the industries where water ingress during unplanned excess
-              rains lead to losses.
-            </p>
-          </div>
-          <div className="row-right">
-            <div
-              className="img-box"
-              onClick={() => {
-                openImagePopup("/fed5.png");
-              }}
-            >
-              <span>
-                <h3>MULTI GABLE (MG)</h3>
-              </span>
-              <span>
-                <Image
-                  id="frame-img-one"
-                  className="frame-imgs"
-                  src="/fed5.png"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <div className="row-five">
-          <div className="row-left">
-            <h2>5. LEAN TO (LT)</h2>
-            <p>
-              This type of frame is the most preferred type, for sheds requiring
-              an expansion along the width. It requires the original shed to be
-              designed such that it is able to take the load of the expanded
-              shed along with the new shed. Lean to sheds are designed to match
-              the roof slope of the existing shed such that the water is
-              discharged out of the shed.
-            </p>
-          </div>
-          <div className="row-right">
-            <div
-              className="img-box"
-              onClick={() => {
-                openImagePopup("/fed5.png");
-              }}
-            >
-              <span>
-                <h3>LEAN TO (LT)</h3>
-              </span>
-              <span>
-                <Image
-                  id="frame-img-one"
-                  className="frame-imgs"
-                  src="/fed5.png"
-                  alt=""
-                  width={0}
-                  height={0}
-                  unoptimized
-                  priority
-                ></Image>
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {selectedImage && (
-        <div
-          className={`image-popup ${isVisible ? "visible" : ""}`}
-          onClick={closeImagePopup}
-        >
-          <div className="popup-content">
+    <div className="infastructure-container">
+      <div className="banner">
+        <div className="back-image" id="homepage">
+          <div className="background-img">
             <Image
-              src={selectedImage}
-              alt=""
-              layout="fill"
-              objectFit="contain"
-            ></Image>
+              src={"/Picture7.png"}
+              alt="Picture of the background"
+              width={0}
+              height={0}
+              unoptimized
+              priority
+            />
+          </div>
+          <div className="background-color"></div>
+        </div>
+        <header>
+          <Navbar />
+          <div className="header-text">
+            <h1 ref={textRef}>
+              DEVKINANDAN STEEL & METAL <br /> INDUSTRIES LLP
+            </h1>
+            <p>
+              we are pioneers in the steel and metal industry, committed to
+              delivering top-quality products and unmatched service. With years
+              of expertise and a reputation for excellence, we are your trusted
+              partner for all <span id="orange">steel</span> and{" "}
+              <span id="orange">metals</span> needs
+            </p>
+          </div>
+        </header>
+      </div>
+
+      <div className="vision-mission">
+        <h1>Vision & Mission</h1>
+        <div className="vision-mission-df">
+          <div className="vision">
+            <h2>Our Vision</h2>
+            <p>
+              Our vision is to be the industry leader in providing innovative,
+              durable, and cost-effective pre-engineered building solutions that
+              meet the evolving needs of our clients. We strive to deliver
+              high-quality structures that combine efficiency, sustainability,
+              and design flexibility, ensuring that every project is completed
+              on time and within budget. By leveraging cutting-edge technology,
+              sustainable practices, and a customer-focused approach, we aim to
+              reshape the construction landscape and become the preferred
+              partner for businesses and industries worldwide, contributing to
+              the growth and success of our communities.
+            </p>
+          </div>
+          <div className="mission">
+            <h2>Our Mission</h2>
+            <p>
+              Devkinandan Steel & Metal Industries LLP will consistently be the
+              preferred partner of steel building users, their consultants and
+              contractors. We give value for money by prompt delivery of high
+              quality buildings, supported by accurate engineering designs
+              through our investments in people, technology and manufacturing
+              capacity. Profitable growth and our passion for innovation let us
+              continue to offer rewarding careers to our employees and
+              continuously provide excellent service to our customers.
+            </p>
           </div>
         </div>
-      )}
+      </div>
+
+      <div className="product-we-offer">
+        <h1>Product We Offer</h1>
+        <div className="product-offer-grid">
+          <div className="products">
+            <span>
+              <Image
+                src={"/frames-one.jpg"}
+                width={450}
+                height={250}
+                alt="Images"
+                unoptimized
+                priority
+              ></Image>
+            </span>
+            <span>
+              <h3>Standard Frame Types</h3>
+            </span>
+          </div>
+          <div className="products">
+            <span>
+              <Image
+                src={"/fed1.png"}
+                width={450}
+                height={250}
+                alt="Images"
+                unoptimized
+                priority
+              ></Image>
+            </span>
+            <span>
+              <h3>PEB Frames</h3>
+            </span>
+          </div>
+          <div className="products">
+            <span>
+              <Image
+                src={"/puf.png"}
+                width={450}
+                height={250}
+                alt="Images"
+                unoptimized
+                priority
+              ></Image>
+            </span>
+            <span>
+              <h3>Insulation</h3>
+            </span>
+          </div>
+          <div className="products">
+            <span>
+              <Image
+                src={"/cranes-one.png"}
+                width={450}
+                height={250}
+                alt="Images"
+                unoptimized
+                priority
+              ></Image>
+            </span>
+            <span>
+              <h3>Cranes</h3>
+            </span>
+          </div>
+          <div className="products">
+            <span>
+              <Image
+                src={"/factory-two.png"}
+                width={450}
+                height={250}
+                alt="Images"
+                unoptimized
+                priority
+              ></Image>
+            </span>
+            <span>
+              <h3>Mezzanine</h3>
+            </span>
+          </div>
+          <div className="products">
+            <span>
+              <Image
+                src={"/girt.png"}
+                width={450}
+                height={250}
+                alt="Images"
+                unoptimized
+                priority
+              ></Image>
+            </span>
+            <span>
+              <h3>Purlin & Girt</h3>
+            </span>
+          </div>
+          <div className="products">
+            <span>
+              <Image
+                src={"/roof-img-one.png"}
+                width={450}
+                height={250}
+                alt="Images"
+                unoptimized
+                priority
+              ></Image>
+            </span>
+            <span>
+              <h3>Roofing & Cladding</h3>
+            </span>
+          </div>
+          <div className="products">
+            <span>
+              <Image
+                src={"/technical-one.png"}
+                width={450}
+                height={250}
+                alt="Images"
+                unoptimized
+                priority
+              ></Image>
+            </span>
+            <span>
+              <h3>Technical Details</h3>
+            </span>
+          </div>
+          <div className="products">
+            <span>
+              <Image
+                src={"/time-one.png"}
+                width={450}
+                height={250}
+                alt="Images"
+                unoptimized
+                priority
+              ></Image>
+            </span>
+            <span>
+              <h3>Trims & Flashing</h3>
+            </span>
+          </div>
+          <div className="products">
+            <span>
+              <Image
+                src={"/ven1.png"}
+                width={450}
+                height={250}
+                alt="Images"
+                unoptimized
+                priority
+              ></Image>
+            </span>
+            <span>
+              <h3>Ventilation</h3>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div className="section-three">
+        <hr className="section-three-line" />
+
+        <div className="section-three-df">
+          <div className="section-three-top">
+            <h1>Our Client</h1>
+          </div>
+          <div className="section-three-bottom">
+            <div className="section-three-bottom-logo-one">
+              <div className="">
+                <Image
+                  src={"/Picture1.png"}
+                  width={0}
+                  height={0}
+                  alt="alfanar"
+                  unoptimized
+                  style={{ width: "120px", height: "auto" }}
+                ></Image>
+              </div>
+              <div className="">
+                <Image
+                  src="/Picture2.png"
+                  alt="ardan"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  style={{ width: "100px", height: "auto" }}
+                />
+              </div>
+              <div className="">
+                <Image
+                  src="/Picture3.png"
+                  alt="danish"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  style={{ width: "150px", height: "auto" }}
+                />
+              </div>
+              <div className="">
+                <Image
+                  src="/Picture4.png"
+                  alt="ets"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  style={{ width: "120px", height: "auto" }}
+                />
+              </div>
+            </div>
+            <div className="section-three-bottom-logo-two">
+              <div className="">
+                <Image
+                  src={"/Picture1.png"}
+                  width={0}
+                  height={0}
+                  alt="alfanar"
+                  unoptimized
+                  style={{ width: "120px", height: "auto" }}
+                ></Image>
+              </div>
+              <div className="">
+                <Image
+                  src="/Picture2.png"
+                  alt="ardan"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  style={{ width: "100px", height: "auto" }}
+                />
+              </div>
+              <div className="">
+                <Image
+                  src="/Picture3.png"
+                  alt="danish"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  style={{ width: "150px", height: "auto" }}
+                />
+              </div>
+              <div className="">
+                <Image
+                  src="/Picture4.png"
+                  alt="ets"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  style={{ width: "120px", height: "auto" }}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr className="section-three-line" />
+      </div>
+
+      <div className="section-four">
+        <div className="section-four-df">
+          <div className="section-four-header">
+            <h1>
+              WE THRIVE ON <span id="imposs">IMPOSSIBLE</span>
+            </h1>
+          </div>
+
+          <div className="section-four-grid">
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <video autoPlay muted loop playsInline>
+                    <source src="/yash.mp4" type="video/mp4"></source>
+                  </video>
+                </div>
+                <div className="section-four-box-one-left-text">
+                  <h1>
+                    Purple Drops - PEB Structure with Mezzanine Floor and Goods
+                    Lift
+                  </h1>
+                  <p>
+                    We proudly designed, manufactured, and installed a robust
+                    Pre-Engineered Building (PEB) structure for Purple Drops, a
+                    leading water bottle processing company. This project
+                    featured a customized mezzanine floor, offering additional
+                    workspace and storage, along with a seamlessly integrated
+                    goods lift for efficient material handling.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>01</h1>
+              </div>
+            </div>
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <video autoPlay muted loop playsInline>
+                    <source src="/purple.mp4" type="video/mp4"></source>
+                  </video>
+                </div>
+                <div className="section-four-box-one-left-text">
+                  <h1>
+                    Yash Packaging and Paras Enterprises - PEB Structure with
+                    Mezzanine Floor and Complete Civil Work
+                  </h1>
+                  <p>
+                    We had the privilege of designing, manufacturing, and
+                    installing a state-of-the-art Pre-Engineered Building (PEB)
+                    for Yash Packaging and Paras Enterprises, a prominent name
+                    in the packaging material industry. This comprehensive
+                    project included a customized mezzanine floor, along with
+                    all necessary civil work, including staff rooms, washrooms,
+                    and essential facilities.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>02</h1>
+              </div>
+            </div>
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <video autoPlay muted loop playsInline>
+                    <source src="/nine.mp4" type="video/mp4"></source>
+                  </video>
+                </div>
+                <div className="section-four-box-one-left-text">
+                  <h1>
+                    Nine Corporation - PEB Structure with Mezzanine Floor and
+                    Ventilation Systems
+                  </h1>
+                  <p>
+                    We successfully designed, manufactured, and installed a
+                    durable Pre-Engineered Building (PEB) for Nine Corporation
+                    near Mundra, Gujarat. Specializing in tyre recycling and
+                    storage, the facility required customized solutions to meet
+                    its operational needs.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>03</h1>
+              </div>
+            </div>
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <video autoPlay muted loop playsInline>
+                    <source src="/akshar.mp4" type="video/mp4"></source>
+                  </video>
+                </div>
+                <div className="section-four-box-one-left-text">
+                  <h1>
+                    Akshar Industries - Heavy PEB Structure for Steel Trading
+                    Operations
+                  </h1>
+                  <p>
+                    We proudly designed, manufactured, and installed a robust
+                    Heavy Structure for Akshar Industries in Gandhidham,
+                    Gujarat. Specializing in the trading of steel components,
+                    plates, angles, and more, the company needed a reliable and
+                    spacious structure to support its operations.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>04</h1>
+              </div>
+            </div>
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <video autoPlay muted loop playsInline>
+                    <source src="/agri.mp4" type="video/mp4"></source>
+                  </video>
+                </div>
+                <div className="section-four-box-one-left-text">
+                  <h1>
+                    Akshar Agri Processing Pvt. Ltd. - Conventional Structure
+                    for Agri Product Processing
+                  </h1>
+                  <p>
+                    We successfully designed, manufactured, and installed a
+                    conventional steel structure for Akshar Agri Processing Pvt.
+                    Ltd. near Mundra, Gujarat. As a company engaged in the
+                    processing of agricultural products, they required a robust
+                    and spacious facility to streamline their operations.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>05</h1>
+              </div>
+            </div>
+
+            <div className="section-four-box-one">
+              <div className="section-four-box-one-left">
+                <div className="section-four-box-one-left-image">
+                  <video autoPlay muted loop playsInline>
+                    <source src="/agro.mp4" type="video/mp4"></source>
+                  </video>
+                </div>
+                <div className="section-four-box-one-left-text">
+                  <h1>
+                    Ashok Agro Commodity - PEB Warehouse for Rental Purpose
+                  </h1>
+                  <p>
+                    We had the opportunity to design, manufacture, and install a
+                    high-quality Pre-Engineered Building (PEB) for Ashok Agro
+                    Commodity near Mundra, Gujarat. As a versatile business
+                    entity, they required a durable and spacious warehouse to
+                    offer on rent.
+                  </p>
+                </div>
+              </div>
+              <div className="section-four-box-one-right">
+                <h1>06</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="factory-unit">
+        <div className="factory-unit-heading">
+          <h1>Factory Unit</h1>
+          <p>
+            Our factory unit is built on precision, efficiency, and innovation,
+            ensuring top-quality production at every stage. With a commitment to
+            sustainability, we integrate advanced manufacturing techniques to
+            optimize performance while reducing environmental impact. Every
+            product reflects our dedication to craftsmanship, reliability, and
+            industry-leading standards. By continuously evolving, we power
+            industries with excellence, meeting the demands of a dynamic and
+            competitive market
+          </p>
+        </div>
+        <div className="navigation-wrapper">
+          <div ref={sliderRef} className="keen-slider">
+            {/* <div className="keen-slider__slide number-slide1">
+              <div className="unit-right-part">
+                <Image
+                  src="./Untitled-design.png"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  priority
+                ></Image>
+              </div>
+            </div> */}
+            <div className="keen-slider__slide number-slide2">
+              <div className="unit-right-part">
+                <Image
+                  src="/Factory-image10.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  priority
+                ></Image>
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide3">
+              <div className="unit-right-part">
+                <Image
+                  src="/Factory-image11.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  priority
+                ></Image>
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide4">
+              <div className="unit-right-part">
+                <Image
+                  src="/Factory-image12.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  priority
+                ></Image>
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide5">
+              <div className="unit-right-part">
+                <Image
+                  src="/Factory-image13.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  priority
+                ></Image>
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide6">
+              <div className="unit-right-part">
+                <Image
+                  src="/Factory-image14.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  priority
+                ></Image>
+              </div>
+            </div>
+            <div className="keen-slider__slide number-slide7">
+              <div className="unit-right-part">
+                <Image
+                  src="/Factory-image15.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  priority
+                ></Image>
+              </div>
+            </div>
+
+            <div className="keen-slider__slide number-slide9">
+              <div className="unit-right-part">
+                <Image
+                  src="/Factory-image17.jpeg"
+                  alt="unit image"
+                  width={0}
+                  height={0}
+                  unoptimized
+                  priority
+                ></Image>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <Footer />
     </div>
   );
 };
 
-export default Page;
+export default Infastructure;
