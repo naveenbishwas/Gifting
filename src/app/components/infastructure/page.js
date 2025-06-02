@@ -285,7 +285,7 @@ const Infastructure = () => {
 
         <div className="section-three-df">
           <div className="section-three-top">
-            <h1>Our Client</h1>
+            <h1>Our Clients</h1>
           </div>
           <div className="section-three-bottom">
             <div className="section-three-bottom-logo-one">
