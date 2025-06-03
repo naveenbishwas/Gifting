@@ -77,10 +77,10 @@ const Infastructure = () => {
           <Navbar />
           <div className="header-text">
             <h1 ref={textRef}>
-              DEVKINANDAN STEEL & METAL <br /> INDUSTRIES LLP
+              KRYYS STEEL & METAL <br /> INDUSTRIES LLP
             </h1>
             <p>
-              we are pioneers in the steel and metal industry, committed to
+              We are pioneers in the steel and metal industry, committed to
               delivering top-quality products and unmatched service. With years
               of expertise and a reputation for excellence, we are your trusted
               partner for all <span id="orange">steel</span> and{" "}
@@ -111,7 +111,7 @@ const Infastructure = () => {
           <div className="mission">
             <h2>Our Mission</h2>
             <p>
-              Devkinandan Steel & Metal Industries LLP will consistently be the
+              Kryys Steel & Metal Industries LLP will consistently be the
               preferred partner of steel building users, their consultants and
               contractors. We give value for money by prompt delivery of high
               quality buildings, supported by accurate engineering designs
