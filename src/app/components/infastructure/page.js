@@ -76,9 +76,7 @@ const Infastructure = () => {
         <header>
           <Navbar />
           <div className="header-text">
-            <h1 ref={textRef}>
-              KRYYS STEEL & METAL <br /> INDUSTRIES LLP
-            </h1>
+            <h1 ref={textRef}>KRYYS GLOBAL</h1>
             <p>
               We are pioneers in the steel and metal industry, committed to
               delivering top-quality products and unmatched service. With years
@@ -111,14 +109,14 @@ const Infastructure = () => {
           <div className="mission">
             <h2>Our Mission</h2>
             <p>
-              Kryys Steel & Metal Industries LLP will consistently be the
-              preferred partner of steel building users, their consultants and
-              contractors. We give value for money by prompt delivery of high
-              quality buildings, supported by accurate engineering designs
-              through our investments in people, technology and manufacturing
-              capacity. Profitable growth and our passion for innovation let us
-              continue to offer rewarding careers to our employees and
-              continuously provide excellent service to our customers.
+              Kryys Global will consistently be the preferred partner of steel
+              building users, their consultants and contractors. We give value
+              for money by prompt delivery of high quality buildings, supported
+              by accurate engineering designs through our investments in people,
+              technology and manufacturing capacity. Profitable growth and our
+              passion for innovation let us continue to offer rewarding careers
+              to our employees and continuously provide excellent service to our
+              customers.
             </p>
           </div>
         </div>

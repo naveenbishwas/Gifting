@@ -16,11 +16,11 @@ const Navbar = () => {
   // };
 
   const cancelHandler = () => {
-    setMenuOpen(false);
+    setMenuOpen(true);
   };
 
   const hamHandler = () => {
-    setMenuOpen(true);
+    setMenuOpen(false);
   };
 
   return (
