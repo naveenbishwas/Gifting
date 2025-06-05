@@ -3,6 +3,7 @@
   background-color: black;
   color: white;
   padding: 60px 10%;
+  padding-bottom: 1%;
   font-family: Arial, sans-serif;
 }
 
@@ -27,10 +28,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid white;
+  border: none !important;
   padding: 10px;
-  width: 150px;
-  text-align: center;
+  margin-left: 10px;
+  text-align: left;
 }
 
 /* Footer Links */
@@ -140,11 +141,20 @@
   color: gray;
 }
 
+.unnity {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.unnity a {
+  text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .footer-container {
     flex-direction: column;
-
     text-align: center;
   }
 
@@ -162,5 +172,19 @@
 
   .newsletter {
     flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .unnity p {
+    font-size: 12px;
+  }
+
+  .unnity {
+    margin-top: 15%;
+  }
+
+  .footer {
+    padding-bottom: 15%;
   }
 }

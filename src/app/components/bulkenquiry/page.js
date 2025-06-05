@@ -61,15 +61,44 @@ export default function BulkEnquiry() {
             <select name="category" required>
               <option value="">Category *</option>
               <option value="Medium Back Office Chair">
-                Medium Back Office Chair
+                Smart Watches / Fitness Bands
               </option>
-              <option value="Visitor Chair">Visitor Chair</option>
-              <option value="Bar Stool">Bar Stool</option>
-              <option value="High Back Boss Chair">High Back Boss Chair</option>
-              <option value="Folding Chair">Folding Chair</option>
-              <option value="Mesh Chair">Mesh Chair</option>
-              <option value="Gaming Chair">Gaming Chair</option>
-              <option value="Accessories">Accessories</option>
+              <option value="Visitor Chair">Luxury Pen Sets</option>
+              <option value="Bar Stool">Branded Travel Kits</option>
+              <option value="High Back Boss Chair">
+                Metal Table Clocks or Crystal Showpieces
+              </option>
+              <option value="Folding Chair">
+                Customized Aromatherapycor Wellness Boxes
+              </option>
+              <option value="Mesh Chair">
+                Premium Corporate Jackets / Blazers
+              </option>
+              <option value="Gaming Chair">
+                Branded Gift Vouchers or Subscription Boxes
+              </option>
+              <option value="Accessories">T-Shirt</option>
+              <option value="Accessories">Luxury Pen Sets</option>
+              <option value="Accessories">Notebooks & Diaries</option>
+              <option value="Accessories">
+                Eco-friendly Jute Bags or Cotton Totes
+              </option>
+              <option value="Accessories">Steel Water Bottles</option>
+              <option value="Accessories">Sippers or Coffee Mugs</option>
+              <option value="Accessories">
+                Basic Laptop Sleeves or File Folders
+              </option>
+              <option value="Accessories">Keychains</option>
+              <option value="Accessories">
+                Cap/Hat with Embroidery or Print
+              </option>
+              <option value="Accessories">
+                High-end Bluetooth Speakers or Earbuds
+              </option>
+              <option value="Accessories">
+                Premium Leather Diaries & Organizers
+              </option>
+              <option value="Accessories">Customized Gift Hampers</option>
             </select>
             <input
               type="number"

@@ -1,13 +1,15 @@
+"use client";
 import React from "react";
 import "./footer.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-left">
-          <div className="footer-logo">KRYSS</div>
+          <div className="footer-logo">KRYYS</div>
 
           <div className="footer-links">
             <div className="footer-column">
@@ -30,28 +32,11 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            {/* <div className="footer-column">
-              <h4>About</h4>
-              <ul>
-                <li>
-                  <a href="#">FAQ</a>
-                </li>
-                <li>
-                  <a href="#">Small business vendors</a>
-                </li>
-                <li>
-                  <a href="#">News and Press</a>
-                </li>
-                <li>
-                  <a href="#">Careers</a>
-                </li>
-              </ul>
-            </div> */}
           </div>
         </div>
 
         {/* Right Section - Newsletter & Social Media */}
-        <div className="footer-right">
+        {/* <div className="footer-right">
           <h4>Join</h4>
           <p>
             Subscribe to our Newsletter for the latest corporate gifting trends,
@@ -62,7 +47,6 @@ const Footer = () => {
             <button>Sign me up!</button>
           </div>
 
-          {/* Social Icons */}
           <div className="social-icons">
             <a href="#">
               <Image
@@ -101,13 +85,19 @@ const Footer = () => {
               ></Image>
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* Bottom Footer - Copyright & Privacy */}
       <div className="footer-bottom">
-        <p>© 2025 KRYSS. All rights reserved.</p>
+        <p>© 2025 KRYYS. All rights reserved.</p>
         <a href="#">Our privacy policy</a>
+      </div>
+
+      <div className="unnity">
+        <p>
+          Design by <Link href={"https://unnity.in"}>Unnity</Link>
+        </p>
       </div>
     </footer>
   );
