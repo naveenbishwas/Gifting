@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import "./herobanner.css"; // Import global CSS
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import emailjs from "@emailjs/browser";
 
 const images = [
   "/new-banner4.png",
@@ -15,6 +16,122 @@ export default function BackgroundSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+
+  // const submitHanlder = (e) => {
+  //   e.preventDefault();
+
+  //   const serviceId = "service_lc3zqsj";
+  //   const templateId = "template_lgmyk3o";
+  //   const publicKey = "vwQ1UwMU_xiay6xqT";
+  //   const comfirmationTemplateId = "template_dtk82zi";
+
+  //   const templateParams = {
+  //     to_name: "Team",
+  //     client_name: firstName,
+  //     client_name: lastName,
+  //     phone_no: phone,
+  //     email_id: email,
+  //     message_id: message,
+  //   };
+
+  //   const confirmationParams = {
+  //     name: `${firstName} ${lastName}`,
+  //     to_email: email,
+  //     to_phone: email,
+  //     to_message: message,
+  //   };
+
+  //   emailjs
+  //     .send(serviceId, templateId, templateParams, publicKey)
+  //     .then((response) => {
+  //       console.log("Email sent successfully", response);
+
+  //       setFirstName("");
+  //       setLastName("");
+  //       setEmail("");
+  //       setPhone("");
+  //       setMessage("");
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+
+  //   emailjs
+  //     .send(serviceId, comfirmationTemplateId, confirmationParams, publicKey)
+  //     .then((response) => {
+  //       console.log("Confirmation email sent sucessfully", response);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+
+    const serviceId = "service_1dg1yw8";
+    const templateId = "template_0tc8ixe";
+    const confirmationTemplateId = "template_7hd724r";
+    const publicKey = "ZsS85rnTf5NpgwIsN";
+
+    const templateParams = {
+      to_name: "Your Team",
+      to_email: "Kryysglobal@gmail.com",
+      client_firstname: firstName,
+      client_lastname: lastName,
+      phone_no: phone,
+      email_id: email,
+      message_body: message,
+    };
+
+    const confirmationParams = {
+      to_name: "Your Team",
+      to_email: "Kryysglobal@gmail.com",
+      client_firstname: firstName,
+      client_lastname: lastName,
+      phone_no: phone,
+      email_id: email,
+      message_body: message,
+    };
+
+    emailjs
+      .send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("Admin email sent", response);
+        return emailjs.send(
+          serviceId,
+          confirmationTemplateId,
+          confirmationParams,
+          publicKey
+        );
+      })
+      .then((response) => {
+        console.log("Confirmation email sent", response);
+
+        // ✅ Reset values after both emails are sent
+        resetFormFields();
+
+        // Optional: show feedback
+        alert("Thank you! Your message has been sent.");
+      })
+      .catch((error) => {
+        console.log("Email error", error);
+      });
+  };
+
+  const resetFormFields = () => {
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPhone("");
+    setMessage("");
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -63,43 +180,46 @@ export default function BackgroundSlider() {
             <strong>1 business day</strong> (usually sooner!). Or{" "}
             <a href="#">book a call</a>.
           </p>
-          <form className="gifting-form">
+          <form className="gifting-form" onSubmit={submitHandler}>
             <div className="form-group">
-              <input type="text" placeholder="First name*" required />
-              <input type="text" placeholder="Last name*" required />
-            </div>
-            <div className="form-group">
-              <input type="email" placeholder="Email*" required />
-              <input type="text" placeholder="Phone number*" required />
-            </div>
-            {/* <div className="form-group">
               <input
-                type="number"
-                placeholder="Number of gifts needed*"
+                type="text"
+                placeholder="First name*"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
                 required
-              />
-              <input type="text" placeholder="Total Gifting Budget*" required />
-            </div> */}
-            {/* <div className="form-group">
-              <input
-                id="date"
-                type="date"
-                placeholder="Gifts needed by date*"
-                required
-              />
-              <DatePicker
-                selected={selectedDate}
-                onChange={(date) => setSelectedDate(date)}
-                placeholderText="Gifts needed by date*"
-                className="custom-input"
               />
               <input
                 type="text"
-                placeholder="How did you hear about us?*"
+                placeholder="Last name*"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
                 required
               />
-            </div> */}
-            <textarea placeholder="Message*" rows="4"></textarea>
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                placeholder="Email*"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <input
+                type="text"
+                placeholder="Phone number*"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                required
+              />
+            </div>
+            <textarea
+              placeholder="Message*"
+              rows="4"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              required
+            ></textarea>
             <button type="submit" className="submit-button">
               Submit
             </button>
