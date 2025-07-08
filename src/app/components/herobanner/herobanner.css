@@ -234,3 +234,12 @@ input[type="date"] {
     padding: 8px 12px;
   }
 }
+
+.success-message p {
+  color: green;
+  margin-top: 5px;
+}
+
+.success-message h3 {
+  font-size: 21px;
+}

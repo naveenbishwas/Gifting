@@ -16,6 +16,7 @@ export default function BackgroundSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(false);
   const [selectedDate, setSelectedDate] = useState(null);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -104,24 +105,29 @@ export default function BackgroundSlider() {
       .send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         console.log("Admin email sent", response);
-        return emailjs.send(
-          serviceId,
-          confirmationTemplateId,
-          confirmationParams,
-          publicKey
-        );
-      })
-      .then((response) => {
-        console.log("Confirmation email sent", response);
 
-        // ✅ Reset values after both emails are sent
+        // 🔄 Attempt confirmation email, but don't block success flow
+        emailjs
+          .send(
+            serviceId,
+            confirmationTemplateId,
+            confirmationParams,
+            publicKey
+          )
+          .then((response) => {
+            console.log("Confirmation email sent", response);
+          })
+          .catch((error) => {
+            console.log("Confirmation email error", error);
+          });
+
+        // ✅ Show success regardless of second email
         resetFormFields();
-
-        // Optional: show feedback
-        alert("Thank you! Your message has been sent.");
+        setFormSubmitted(true);
       })
       .catch((error) => {
-        console.log("Email error", error);
+        console.log("Admin email error", error);
+        alert("Oops! Something went wrong.");
       });
   };
 
@@ -180,7 +186,11 @@ export default function BackgroundSlider() {
             <strong>1 business day</strong> (usually sooner!). Or{" "}
             <a href="#">book a call</a>.
           </p>
-          <form className="gifting-form" onSubmit={submitHandler}>
+          <form
+            className="gifting-form"
+            onSubmit={submitHandler}
+            autoComplete="off"
+          >
             <div className="form-group">
               <input
                 type="text"
@@ -223,6 +233,12 @@ export default function BackgroundSlider() {
             <button type="submit" className="submit-button">
               Submit
             </button>
+            {formSubmitted && (
+              <span className="success-message">
+                <h3>Success</h3>
+                <p>Thank You. The form has been submitted.</p>
+              </span>
+            )}
           </form>
         </div>
       </div>
